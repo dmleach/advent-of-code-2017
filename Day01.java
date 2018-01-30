@@ -6,6 +6,10 @@ public class Day01 extends CommandLineInput {
 
     public Day01(String[] args) {
         super(args);
+
+        if (this.getInput() == null) {
+            throw new IllegalArgumentException("Puzzle input not found");
+        }
     }
 
     public char[] getReciprocalCharacters(int index, ReciprocalMethod method) {
